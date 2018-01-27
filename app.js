@@ -1,21 +1,27 @@
-'use strict';
-var http = require("http");
-var port = process.env.PORT || 1337;
-var MongoClient = require('mongodb').MongoClient, assert = require('assert');
+var express = require('express'),
+    app = express(),
+    port = process.env.PORT || 3000,
+    mongoose = require('mongoose'),
+    Task = require('./api/models/todoListModel'), //created model loading here
+    bodyParser = require('body-parser');
 
-// Connection URL to local MongoDB
-var url = 'mongodb://localhost:27017/courses';
+// mongoose instance connection url connection
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/Tododb');
 
-// Use connect method to connect to the server
-MongoClient.connect(url, function(err, db) {
-    assert.equal(null, err);
-    console.log("Connected successfully to server");
 
-    db.close();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+var routes = require('./api/routes/todoListRoutes'); //importing route
+routes(app); //register the route
+
+// Invalid requests handler
+app.use(function(req, res) {
+    res.status(404).send({url: req.originalUrl + ' not found'})
 });
 
+app.listen(port);
 
-http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end("Hello world from COMP-308 Student!")
-}).listen(port);
+
+console.log('todo list RESTful API server started on: ' + port);
