@@ -1,0 +1,11 @@
+{
+  "name": "firstnodejs",
+  "version": "0.0.0",
+  "description": "NodeJSWebApp",
+  "main": "app.js",
+  "author": {
+    "name": "Bohdansh"
+  },
+  "dependencies": {
+  }
+}
