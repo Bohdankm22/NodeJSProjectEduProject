@@ -6,43 +6,89 @@ var Schema = mongoose.Schema;
 var FishTrackSchema = new Schema(
     {
         fishery: {
-            name: String,
-            location: String,
-            catch_time: Timestamp,
-            territory: String,
-            fish_type: String,
-            batch_size: {
-                value: Number,
-                unit: String
+            name: {
+                type: String
             },
-            handling: String,
+            location: {
+                type: String
+            },
+            catch_time: {
+                type: Date
+            },
+            territory: {
+                type: String
+            },
+            fish_type: {
+                type: String
+            },
+            batch_size: {
+                value: {
+                    type: Number
+                },
+                unit: {
+                    type: String
+                }
+            },
+            handling: {
+                type: String
+            },
             temperature: {
-                value: Number,
-                unit: String
+                value: {
+                    type: Number
+                },
+                unit: {
+                    type: String
+                }
             }
         },
         logistics: {
-            name: String,
-            pick_up_time: Timestamp,
-            handling: String,
+            name: {
+                type: String
+            },
+            pick_up_time: {
+                type: Date
+            },
+            handling: {
+                type: String
+            },
             temperature: {
-                value: Number,
-                unit: String
+                value: {
+                    type: Number
+                },
+                unit: {
+                    type: String
+                }
             }
         },
         retail: {
-            name: String,
-            received: Timestamp,
-            handling: String,
+            name: {
+                type: String
+            },
+            received: {
+                type: Date
+            },
+            handling: {
+                type: String
+            },
             temperature: {
-                value: Number,
-                unit: String
+                value: {
+                    type: Number
+                },
+                unit: {
+                    type: String
+                }
             },
             expected_shelf_life: {
-                value: Number,
-                unit: String
+                value: {
+                    type: Number
+                },
+                unit: {
+                    type: String
+                }
             },
-            best_before: Timestamp
+            best_before: {
+                type: Date
+            }
         }
     }
 );
