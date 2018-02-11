@@ -8,7 +8,10 @@ var express = require('express'),
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://138.197.163.67:27017/fishdb');
+mongoose.connect('mongodb://dbUser:dbUser2342!@138.197.163.67:27017/fishdb', function (err, db) {
+    if(err) { return console.dir(err); }
+
+});
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
