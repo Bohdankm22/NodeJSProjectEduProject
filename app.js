@@ -8,7 +8,7 @@ var express = require('express'),
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 
-mongoose.connect(uri);
+mongoose.connect('mongodb://138.197.163.67:27017/fishdb');
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
