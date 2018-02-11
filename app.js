@@ -2,18 +2,19 @@ var express = require('express'),
     app = express(),
     port = process.env.PORT || 3000,
     mongoose = require('mongoose'),
-    Task = require('./api/models/todoListModel'), //created model loading here
+    FishTrack = require('./api/models/fishTrackModel'), //created model loading here
     bodyParser = require('body-parser');
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/Tododb');
+var uri = "mongodb+srv://admin:admin@sandbox-vnemk.mongodb.net/test";
+mongoose.connect(uri);
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var routes = require('./api/routes/todoListRoutes'); //importing route
+var routes = require('./api/routes/fishTrackRoutes'); //importing route
 routes(app); //register the route
 
 // Invalid requests handler
