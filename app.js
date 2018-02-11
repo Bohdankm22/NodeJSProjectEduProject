@@ -7,7 +7,6 @@ var express = require('express'),
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-var uri = "mongodb+srv://admin:admin@sandbox-vnemk.mongodb.net/test";
 mongoose.connect(uri);
 
 
