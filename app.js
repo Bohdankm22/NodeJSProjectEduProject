@@ -15,6 +15,8 @@ mongoose.connect('mongodb://dbUser:dbUser2342!@138.197.163.67:27017/fishdb', fun
 
 //Adding EJS view template engine
 app.set('view engine', 'ejs');
+app.set('views','./api/views');
+
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -24,7 +26,7 @@ app.use(function(req, res, next) {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var routes = require('./api/routes/fishTrackRoutes'); //importing route
+let routes = require('./api/routes/fishTrackRoutes'); //importing route
 routes(app); //register the route
 
 // Invalid requests handler
@@ -35,4 +37,4 @@ app.use(function(req, res) {
 app.listen(port);
 
 
-console.log('todo list RESTful API server started on: ' + port);
+console.log('Server started at: ' + 'http://localhost:' + port);
