@@ -2,6 +2,8 @@
 module.exports = function (app) {
     let fishTrack = require('../controllers/fishTrackController');
     let updateFishery = require('../controllers/updateWebFormController');
+    let viewBatch = require('../controllers/viewBatchController');
+
 
     //TODO Routes
     app.route('/trackfish')
@@ -10,8 +12,7 @@ module.exports = function (app) {
     app.route('/update_fishery')
         .get(updateFishery.renderUpdateFishery);
 
-    //TODO Change Controller
-    //Added for sandbox purposes
+
     app.route('/viewbatch')
-        .get(updateFishery.renderViewBatch);
+        .get(viewBatch.renderViewBatch);
 };
