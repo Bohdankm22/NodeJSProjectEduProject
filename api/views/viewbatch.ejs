@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Fishackaton</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="public/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="public/stylesheets/index.css">
+
+</head>
+<body>
+
+<!-- Reload Button & Account Settings -->
+<!-- Links to reload the list of transaction; and the link to user account settings -->
+<div class="container">
+    <center>
+        <div class="float-left">
+            <a href=""><i class="fas fa-redo"></i></a>
+        </div>
+        Local Fish Supplier
+        <div class="float-right">
+            <a href="./account_settings.html"><i class="fas fa-user"></i></a>
+        </div>
+    </center>
+</div>
+
+<!-- Main Fish Pricess Data -->
+<div class="bd-callout bd-callout-warning">
+
+    <!-- Product snippets  -->
+    <h2>
+        <center class="product-fresh"><i class="fas fa-check-circle"></i> Fresh</center>
+    </h2>
+
+    <!-- Fish Details -->
+
+    <!-- ver 0 -->
+    <!-- <div class="media">
+        <img class="mr-3" src="./img/Salmon.png" alt="Generic placeholder image" width="30%">
+        <div class="media-body">
+            <h5 class="mt-0">Salmon</h5>
+            You have just scanned Salmon. It looks like it's in good condition and every single step in the process has been validated. Enjoy your fish.
+        </div>
+    </div>
+    <br> -->
+
+    <!-- ver 1 -->
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+            <h5 class="card-title">Salmon</h5>
+            <p class="card-text">You have just scanned Salmon. It looks like it's in good condition and every single step in the process has been validated. Enjoy your fish.</p>
+            <p class="card-text">It's been <span class="badge badge-pill badge-info">4 days</span> since fish got caught</p>
+        </div>
+        <img class="card-img-bottom" src="./img/Salmon_hirez_img.jpg" alt="Card image cap">
+    </div>
+    <br>
+
+    <!-- Process Chain -->
+    <h4 class="followMeBar">
+        <i class="fas fa-ship"></i>
+        Fishery
+        <i class="fas fa-check-circle product-fresh"></i>
+    </h4>
+    <table class="table">
+        <tbody id="entrydata">
+        <tr>
+            <td>Name</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">Fort Erie Fisheries Co.</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td></td>
+            <td style="text-align: right;"><span class="badge badge-pill badge-info">Fort Erie, ON Canada</span></td>
+        </tr>
+        <tr>
+            <td>Catch Time</td>
+            <td></td>
+            <td style="text-align: right;"><span class="badge badge-pill badge-info">Feb 10, 2018</span></td>
+        </tr>
+        <tr>
+            <td>Territory</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">Lake Erie</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Fish Type</td>
+            <td></td>
+            <td style="text-align: right;"><span class="badge badge-pill badge-info">Salmon</span></td>
+        </tr>
+        <tr>
+            <td>Batch Size</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">450 lbs.</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Handling</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">Frozen</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Temperature</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">-5 °C / +23 °F</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <h4 class="followMeBar">
+        <i class="fas fa-truck"></i>
+        Logistics
+        <i class="fas fa-check-circle product-fresh"></i>
+    </h4>
+    <table class="table">
+        <tbody>
+        <tr>
+            <td>Name</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">East Logistics</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Pick Up Time</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">Feb 11, 2018</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Handling</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">Frozen</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Temperature</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">-5 °C / +23 °F</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <h4 class="followMeBar">
+        <i class="fas fa-shopping-bag"></i>
+        Retail / Distributor
+        <i class="fas fa-check-circle product-fresh"></i>
+    </h4>
+    <table class="table">
+        <tbody>
+        <tr>
+            <td>Name</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">Metro Store</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Received</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">Feb 13, 2018</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Handling</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">Cold Storage</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Temperature</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">0 °C / 32 °F</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Expected Shelf Life</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">2 weeks</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Best Before</td>
+            <td></td>
+            <td style="text-align: right;">
+                <span class="badge badge-pill badge-info">Feb 24, 2018</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- Useful links -->
+    <div>
+        <h4 class="followMeBar">
+            <i class="fas fa-anchor"></i>
+            Useful Links
+        </h4>
+        <table class="table">
+            <tbody id="entrydata">
+            <tr>
+                <td>
+                    <a href="">Nutrition facts</a>
+                </td>
+                <td>
+                </td>
+                <td style="text-align: right;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="">Recipes</a>
+                </td>
+                <td>
+                </td>
+                <td style="text-align: right;">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</br>
+
+<!-- Navigation Buttons -->
+<nav class="navbar fixed-bottom navbar-light bg-light">
+    <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+        <a class="btn btn-outline-primary" href="./index.html" role="button"><i class="fas fa-home"></i></a>
+        <a class="btn btn-outline-primary" href="#" role="button"><i class="fas fa-bullhorn"></i></a>
+    </div>
+</nav>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script src="public/javascript/StickyDate.js"></script>
+<script src="js/StickySummary.js"></script>
+<script src="js/tableFiller.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+</body>
+</html>

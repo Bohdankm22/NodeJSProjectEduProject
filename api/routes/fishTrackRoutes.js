@@ -9,4 +9,7 @@ module.exports = function (app) {
         .post(fishTrack.get_fish_tracking_info);
     app.route('/update_fishery')
         .get(updateFishery.renderUpdateFishery);
+
+    app.route('/viewbatch')
+        .get(updateFishery.renderViewBatch);
 };

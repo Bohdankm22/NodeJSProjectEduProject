@@ -1,6 +1,10 @@
 var mongoose = require('mongoose'),
     FishTrack = mongoose.model('FishTrack');
 
+exports.renderViewBatch = function (req, res) {
+    res.render('viewbatch');
+};
+
 exports.renderUpdateFishery = function (req, res) {
     res.render('addfisheryinfo');
 };
