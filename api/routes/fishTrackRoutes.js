@@ -10,6 +10,8 @@ module.exports = function (app) {
     app.route('/update_fishery')
         .get(updateFishery.renderUpdateFishery);
 
+    //TODO Change Controller
+    //Added for sandbox purposes
     app.route('/viewbatch')
         .get(updateFishery.renderViewBatch);
 };

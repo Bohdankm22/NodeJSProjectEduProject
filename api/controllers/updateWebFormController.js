@@ -1,6 +1,9 @@
 var mongoose = require('mongoose'),
     FishTrack = mongoose.model('FishTrack');
 
+
+//TODO move to separate controller
+//added for sandbox purposes
 exports.renderViewBatch = function (req, res) {
     res.render('viewbatch');
 };

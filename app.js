@@ -25,6 +25,8 @@ app.use(function(req, res, next) {
 });
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use("/public", express.static(__dirname + "/public"));
+
 
 let routes = require('./api/routes/fishTrackRoutes'); //importing route
 routes(app); //register the route
