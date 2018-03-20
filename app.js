@@ -13,6 +13,9 @@ mongoose.connect('mongodb://dbUser:dbUser2342!@138.197.163.67:27017/fishdb', fun
 
 });
 
+//Adding EJS view template engine
+app.set('view engine', 'ejs');
+
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
