@@ -1,6 +1,6 @@
 'use strict';
 
-var mongoose = require('mongoose'),
+let mongoose = require('mongoose'),
     FishTrack = mongoose.model('FishTrack');
 
 let jwt = require('jsonwebtoken');
