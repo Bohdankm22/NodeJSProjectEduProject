@@ -15,4 +15,9 @@ module.exports = function (app) {
 
     app.route('/viewbatch')
         .get(viewBatch.renderViewBatch);
+    app.route('/viewbatch/:batchId')
+        .get(viewBatch.read);
+        // .put(viewBatch.update);
+
+    app.param('batchId', viewBatch.viewBatchById);
 };
