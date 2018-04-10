@@ -6,8 +6,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="public/stylesheet/bootstrap.css">
-    <link rel="stylesheet" href="public/stylesheet/index.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheet/bootstrap.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="/stylesheet/index.css">
 
 </head>
 <body>
@@ -55,7 +56,7 @@
             <!--TODO dynamic daysSinceCaught calculation-->
             <p class="card-text">It's been <span class="badge badge-pill badge-info">4 days</span> since fish got caught</p>
         </div>
-        <img class="card-img-bottom" src="public/images/Salmon.png" alt="Card image cap">
+        <img class="card-img-bottom" src="/images/Salmon.png" alt="Card image cap">
     </div>
     <br>
 
@@ -71,50 +72,51 @@
             <td>Name</td>
             <td></td>
             <td style="text-align: right;">
-                <span class="badge badge-pill badge-info">Fort Erie Fisheries Co.</span>
+                <!--<span class="badge badge-pill badge-info">Fort Erie Fisheries Co.</span>-->
+                <span class="badge badge-pill badge-info"><%= batch.fishery.name  %></span>
             </td>
         </tr>
         <tr>
             <td>Location</td>
             <td></td>
-            <td style="text-align: right;"><span class="badge badge-pill badge-info">Fort Erie, ON Canada</span></td>
+            <td style="text-align: right;"><span class="badge badge-pill badge-info"><%= batch.fishery.location  %></span></td>
         </tr>
         <tr>
             <td>Catch Time</td>
             <td></td>
-            <td style="text-align: right;"><span class="badge badge-pill badge-info">Feb 10, 2018</span></td>
+            <td style="text-align: right;"><span class="badge badge-pill badge-info"><%= batch.fishery.catch_time  %></span></td>
         </tr>
         <tr>
             <td>Territory</td>
             <td></td>
             <td style="text-align: right;">
-                <span class="badge badge-pill badge-info">Lake Erie</span>
+                <span class="badge badge-pill badge-info"><%= batch.fishery.territory  %></span>
             </td>
         </tr>
         <tr>
             <td>Fish Type</td>
             <td></td>
-            <td style="text-align: right;"><span class="badge badge-pill badge-info">Salmon</span></td>
+            <td style="text-align: right;"><span class="badge badge-pill badge-info"><%= batch.fishery.fish_type  %></span></td>
         </tr>
         <tr>
             <td>Batch Size</td>
             <td></td>
             <td style="text-align: right;">
-                <span class="badge badge-pill badge-info">450 lbs.</span>
+                <span class="badge badge-pill badge-info"><%= batch.fishery.batch_size.value %>  <%= batch.fishery.batch_size.unit  %></span>
             </td>
         </tr>
         <tr>
             <td>Handling</td>
             <td></td>
             <td style="text-align: right;">
-                <span class="badge badge-pill badge-info">Frozen</span>
+                <span class="badge badge-pill badge-info"><%= batch.fishery.handling  %></span>
             </td>
         </tr>
         <tr>
             <td>Temperature</td>
             <td></td>
             <td style="text-align: right;">
-                <span class="badge badge-pill badge-info">-5 °C / +23 °F</span>
+                <span class="badge badge-pill badge-info"><%= batch.fishery.temperature.value  %>  <%= batch.fishery.temperature.unit  %></span>
             </td>
         </tr>
         </tbody>
@@ -254,9 +256,7 @@
         crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
-<script src="public/javascript/StickyDate.js"></script>
-<script src="js/StickySummary.js"></script>
-<script src="js/tableFiller.js"></script>
+<script src="/javascript/StickyDate.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
 </body>
 </html>
